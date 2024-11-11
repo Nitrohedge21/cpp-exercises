@@ -3,7 +3,8 @@
   "WorkspaceRootPath": "D:\\GitHub\\cpp-exercises\\cpp-exercise-1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF45D870-A2A1-43EB-A3A2-03F7C3D41276}|cpp-exercise-1.vcxproj|D:\\GitHub\\cpp-exercises\\Exercise Files\\Chap02\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{AF45D870-A2A1-43EB-A3A2-03F7C3D41276}|cpp-exercise-1.vcxproj|D:\\GitHub\\cpp-exercises\\cpp-exercise-1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AF45D870-A2A1-43EB-A3A2-03F7C3D41276}|cpp-exercise-1.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,13 +20,13 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "D:\\GitHub\\cpp-exercises\\Exercise Files\\Chap02\\main.cpp",
-              "RelativeDocumentMoniker": "..\\Exercise Files\\Chap02\\main.cpp",
-              "ToolTip": "D:\\GitHub\\cpp-exercises\\Exercise Files\\Chap02\\main.cpp",
-              "RelativeToolTip": "..\\Exercise Files\\Chap02\\main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABCAAAA",
+              "DocumentMoniker": "D:\\GitHub\\cpp-exercises\\cpp-exercise-1\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "D:\\GitHub\\cpp-exercises\\cpp-exercise-1\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-11T15:13:10.601Z",
+              "WhenOpened": "2024-11-11T21:20:59.088Z",
               "EditorCaption": ""
             }
           ]
