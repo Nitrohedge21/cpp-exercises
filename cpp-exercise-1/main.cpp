@@ -60,9 +60,94 @@ void PrintTestCout()
     cout << format("i is now {}\n", i);
 }
 
+struct LibraryCatalogueCard 
+{
+    const char* BookTitle{};
+    const char* Author{};
+    const char* Publisher{};
+    const char* Subject{};
+
+    int ISBN;
+    int YearPublished;
+    int YearAcquired;
+    int StockQuantity;
+
+
+    float DeweyDecimal;
+    
+};
+
+void PrintTestStruct()
+{
+    // Struct Test
+    LibraryCatalogueCard a
+    {
+        "balls", "authorballs",
+        "publisherballs","subjectballs",
+        315269, 2001, 2015,195251,120.5f
+    };
+
+    cout << "Book title: " << a.BookTitle << "\n";
+    cout << "Author: " << a.Author << "\n";
+    cout << "Publisher: " << a.Publisher << "\n";
+    cout << "Subject: " << a.Subject << "\n";
+    cout << "ISBN Number: " << a.ISBN << "\n";
+    cout << "Year Published: " << a.YearPublished << "\n";
+    cout << "Year Acquired: " << a.YearAcquired << "\n";
+    cout << "Stock Quantity: " << a.StockQuantity << "\n";
+    cout << "DeweyDecimal:  " << a.DeweyDecimal << "\n";
+}
+
+class TestClass 
+{
+    // TODO - Figure out how to use classess as an alternative to structure.
+
+public:
+    string* BookTitle;
+    
+    const char* Author{};
+    const char* Publisher{};
+    const char* Subject{};
+    
+    int ISBN = 0;
+    int YearPublished = 0;
+    int YearAcquired = 0;
+    int StockQuantity = 0;
+    
+    float DeweyDecimal = 0.5f;
+
+};
+
+void PrimeNumberCalculation()
+{
+    bool isPrimeNumber = false;
+
+    for (int currentIndex = 2; currentIndex < 100; ++currentIndex)
+    {
+        isPrimeNumber = true;
+
+        for (int factor = 2; factor < currentIndex; ++factor)
+        {
+            if (currentIndex % factor == 0)
+            {
+                isPrimeNumber = false;
+                break;
+            }
+        }
+
+        if (isPrimeNumber)
+        {
+            cout << format("{} ", currentIndex);
+        }
+    }
+}
+
 int main()
 {
     // This is where all the functions need to be called.
     // This is the main "game loop"
-    PrintTestString("TESTINGGGG");
+
+    PrimeNumberCalculation();
 }
+
+
