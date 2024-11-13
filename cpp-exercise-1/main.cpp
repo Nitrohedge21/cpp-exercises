@@ -1,5 +1,6 @@
 #include <iostream>
 #include <format>
+#include "Mercenary.h"
 
 using namespace std;
 
@@ -147,7 +148,15 @@ int main()
     // This is where all the functions need to be called.
     // This is the main "game loop"
 
-    PrimeNumberCalculation();
+    Mercenary TestMerc("", 10, 52.69f);
+    cout << "Merc name: " << TestMerc.GetName() << "\n";
+
+    cout << "Merc level: " << TestMerc.GetLVL() << "\n";
+    cout << "Merc speed: " << TestMerc.GetSpeed() << "\n";
+
+
+    return 0;
+
 }
 
 
