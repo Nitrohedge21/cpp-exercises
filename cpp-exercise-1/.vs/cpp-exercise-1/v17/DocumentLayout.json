@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{AF45D870-A2A1-43EB-A3A2-03F7C3D41276}|cpp-exercise-1.vcxproj|solutionrelative:Mercenary.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF45D870-A2A1-43EB-A3A2-03F7C3D41276}|cpp-exercise-1.vcxproj|D:\\GitHub\\cpp-exercises\\cpp-exercise-1\\Mercenary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{AF45D870-A2A1-43EB-A3A2-03F7C3D41276}|cpp-exercise-1.vcxproj|solutionrelative:Mercenary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AF45D870-A2A1-43EB-A3A2-03F7C3D41276}|cpp-exercise-1.vcxproj|D:\\GitHub\\cpp-exercises\\cpp-exercise-1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{AF45D870-A2A1-43EB-A3A2-03F7C3D41276}|cpp-exercise-1.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF45D870-A2A1-43EB-A3A2-03F7C3D41276}|cpp-exercise-1.vcxproj|D:\\GitHub\\cpp-exercises\\cpp-exercise-1\\Mercenary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{AF45D870-A2A1-43EB-A3A2-03F7C3D41276}|cpp-exercise-1.vcxproj|solutionrelative:Mercenary.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,14 +32,14 @@
               "RelativeDocumentMoniker": "Mercenary.cpp",
               "ToolTip": "D:\\GitHub\\cpp-exercises\\cpp-exercise-1\\Mercenary.cpp",
               "RelativeToolTip": "Mercenary.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABkAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-13T13:36:40.871Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Mercenary.h",
               "DocumentMoniker": "D:\\GitHub\\cpp-exercises\\cpp-exercise-1\\Mercenary.h",
               "RelativeDocumentMoniker": "Mercenary.h",
@@ -52,13 +52,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\GitHub\\cpp-exercises\\cpp-exercise-1\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "D:\\GitHub\\cpp-exercises\\cpp-exercise-1\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAgwJYAAAAnAAAA",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAwwJcAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-11T21:20:59.088Z",
               "EditorCaption": ""
