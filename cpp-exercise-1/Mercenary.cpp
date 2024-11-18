@@ -20,14 +20,15 @@ string Mercenary::GetName()
 	else
 	{
 		// If the mercenary doesn't have a name;
-		cout << "The mercenary does not have a name yet.\n";
+		cout << "\nThe mercenary does not have a name yet.\n";
 		cout << "Please give it a name first\n";
 		// Get user input and call SetName()
 		string LocalNewName;
 		cin >> LocalNewName;
 
 		// The line above doesn't work for some reason
-		if (LocalNewName == "") { cout << "You have to input a valid value"; }
+		// I believe this is doable through a while loop but couldn't figure out how.
+		//if (LocalNewName == "") { cout << "You have to input a valid value"; }
 
 
 		SetName(LocalNewName);

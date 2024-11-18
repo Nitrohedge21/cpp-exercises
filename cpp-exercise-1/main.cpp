@@ -151,8 +151,8 @@ int main()
     Mercenary TestMerc("", 10, 52.69f);
     cout << "Merc name: " << TestMerc.GetName() << "\n";
 
-    cout << "Merc level: " << TestMerc.GetLVL() << "\n";
-    cout << "Merc speed: " << TestMerc.GetSpeed() << "\n";
+    //cout << "Merc level: " << TestMerc.GetLVL() << "\n";
+    //cout << "Merc speed: " << TestMerc.GetSpeed() << "\n";
 
 
     return 0;
