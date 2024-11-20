@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <format>
+#include <Windows.h>
 
 using namespace std;
 
@@ -8,7 +9,7 @@ class Mercenary
 {
 private:
 	string mName;
-	int mLevel;
+	int mHP;
 	float mSpeed;
 
 public:
@@ -17,25 +18,26 @@ public:
 	Mercenary();
 	// This one was used for testing purposes
 
-	Mercenary(string MercName, int MercLevel, float MercSpeed);
+	Mercenary(string MercName, int MercHP, float MercSpeed);
 
+	// General functions
 	string GetName();
 	void SetName(string NewName);
 	int GetHP();
 	void SetHP(int NewHP);
 	float GetSpeed();
 	void SetSpeed(float NewSpeed);
+	void SetPlayerClass();
 
-	void Scout(Mercenary PlayerReference);
-	void Soldier(Mercenary PlayerReference);
-	void Pyro(Mercenary PlayerReference);
-	void Demoman(Mercenary PlayerReference);
-	void Heavy(Mercenary PlayerReference);
-	void Engineer(Mercenary PlayerReference);
-	void Medic(Mercenary PlayerReference);
-	void Sniper(Mercenary PlayerReference);
-	void Spy(Mercenary PlayerReference);
-
-
+	// Mercenary class initializer functions
+	void Scout();
+	void Soldier();
+	void Pyro();
+	void Demoman();
+	void Heavy();
+	void Engineer();
+	void Medic();
+	void Sniper();
+	void Spy();
 };
 

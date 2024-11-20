@@ -2,10 +2,10 @@
 
 Mercenary::Mercenary() {/* This is the default constructor that just creates the Mercenary Object*/ }
 
-Mercenary::Mercenary(string NewName, int NewLevel, float NewSpeed)
+Mercenary::Mercenary(string NewName, int NewHP, float NewSpeed)
 {
 	SetName(NewName);
-	SetHP(NewLevel);
+	SetHP(NewHP);
 	SetSpeed(NewSpeed);
 }
 
@@ -46,12 +46,12 @@ void Mercenary::SetName(string NewName)
 
 int Mercenary::GetHP()
 {
-	return mLevel;
+	return mHP;
 }
 
-void Mercenary::SetHP(int NewLevel)
+void Mercenary::SetHP(int NewHP)
 {
-	mLevel = NewLevel;
+	mHP = NewHP;
 }
 
 float Mercenary::GetSpeed()
@@ -64,87 +64,148 @@ void Mercenary::SetSpeed(float NewSpeed)
 	mSpeed = NewSpeed;
 }
 
+void Mercenary::SetPlayerClass()
+{
+	int UserInput;
+	
+	cout << "Please choose a mercenary class from the following options!" << endl;
+	cout << "Scout (1), Soldier (2), Pyro (3), Demoman (4),";
+	cout << "Heavy(5), Engineer(6), Medic(7), Sniper(8), Spy(9)" << endl;
+
+	cin >> UserInput;
+
+	// In my case, if the input isn't an integer, do the following
+	// The if statement was provided by ChatGPT.
+	if (cin.fail()) 
+	{
+		cin.clear();                // Clear the error state
+		cin.ignore(1000, '\n');     // Discard invalid input from the buffer
+		cout << "Invalid input. Please enter a number between 1 and 9." << endl;
+		Sleep(2000);
+		system("CLS");
+		SetPlayerClass();           // Retry
+		return;
+	}
+
+	switch (UserInput)
+	{
+	case 1:
+		Scout();
+		break;
+	case 2:
+		Soldier();
+		break;
+	case 3:
+		Pyro();
+		break;
+	case 4:
+		Demoman();
+		break;
+	case 5:
+		Heavy();
+		break;
+	case 6:
+		Engineer();
+		break;
+	case 7:
+		Medic();
+		break;
+	case 8:
+		Sniper();
+		break;
+	case 9:
+		Spy();
+		break;
+	default:
+		cout << "Invalid input. Please choose a valid mercenary class!" << endl;
+		Sleep(2000);
+		system("CLS");
+		SetPlayerClass();
+		break;
+	}
+}
+
 // Mercenary Classes //
 // These are going to be called by the switch case in order to set the required values. //
 // Instead of doing it inside main like previously. //
 
-void Mercenary::Scout(Mercenary PlayerReference)
+void Mercenary::Scout()
 {
-	PlayerReference.SetName("Scout");
-	PlayerReference.SetHP(125);
-	PlayerReference.SetSpeed(10.0f);
+	SetName("Scout");
+	SetHP(125);
+	SetSpeed(10.0f);
 
 	cout << "The player has chosen the Scout class!" << endl;
 }
 
-void Mercenary::Soldier(Mercenary PlayerReference)
+void Mercenary::Soldier()
 {
-	PlayerReference.SetName("Soldier");
-	PlayerReference.SetHP(200);
-	PlayerReference.SetSpeed(8.0f);
+	SetName("Soldier");
+	SetHP(200);
+	SetSpeed(8.0f);
 
 	cout << "The player has chosen the Soldier class!" << endl;
 }
 
-void Mercenary::Pyro(Mercenary PlayerReference)
+void Mercenary::Pyro()
 {
-	PlayerReference.SetName("Pyro");
-	PlayerReference.SetHP(175);
-	PlayerReference.SetSpeed(8.0f);
+	SetName("Pyro");
+	SetHP(175);
+	SetSpeed(8.0f);
 
 	cout << "The player has chosen the Pyro class!" << endl;
 }
 
-void Mercenary::Demoman(Mercenary PlayerReference)
+void Mercenary::Demoman()
 {
-	PlayerReference.SetName("Demonan");
-	PlayerReference.SetHP(175);
-	PlayerReference.SetSpeed(8.0f);
+	SetName("Demonan");
+	SetHP(175);
+	SetSpeed(8.0f);
 
 	cout << "The player has chosen the Demoman class!" << endl;
 }
 
-void Mercenary::Heavy(Mercenary PlayerReference)
+void Mercenary::Heavy()
 {
-	PlayerReference.SetName("Heavy");
-	PlayerReference.SetHP(300);
-	PlayerReference.SetSpeed(5.5f);
+	SetName("Heavy");
+	SetHP(300);
+	SetSpeed(5.5f);
 
 	cout << "The player has chosen the Heavy class!" << endl;
 }
 
-void Mercenary::Engineer(Mercenary PlayerReference)
+void Mercenary::Engineer()
 {
-	PlayerReference.SetName("Engineer");
-	PlayerReference.SetHP(125);
-	PlayerReference.SetSpeed(8.0f);
+	SetName("Engineer");
+	SetHP(125);
+	SetSpeed(8.0f);
 
 	cout << "The player has chosen the Engineer class!" << endl;
 }
 
-void Mercenary::Medic(Mercenary PlayerReference)
+void Mercenary::Medic()
 {
-	PlayerReference.SetName("Medic");
-	PlayerReference.SetHP(150);
-	PlayerReference.SetSpeed(8.0f);
+	SetName("Medic");
+	SetHP(150);
+	SetSpeed(8.0f);
 
 	cout << "The player has chosen the Medic class!" << endl;
 }
 
-void Mercenary::Sniper(Mercenary PlayerReference)
+void Mercenary::Sniper()
 {
-	PlayerReference.SetName("Sniper");
-	PlayerReference.SetHP(125);
-	PlayerReference.SetSpeed(8.0f);
+	SetName("Sniper");
+	SetHP(125);
+	SetSpeed(8.0f);
 
 	cout << "The player has chosen the Sniper class!" << endl;
 }
 
-void Mercenary::Spy(Mercenary PlayerReference)
+void Mercenary::Spy()
 {
-	PlayerReference.SetName("Spy");
-	PlayerReference.SetHP(125);
-	PlayerReference.SetSpeed(8.0f);
+	SetName("Spy");
+	SetHP(125);
+	SetSpeed(8.0f);
 
 	cout << "The player has chosen the Spy class!" << endl;
 }
