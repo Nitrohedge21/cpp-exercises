@@ -148,11 +148,14 @@ int main()
     // This is where all the functions need to be called.
     // This is the main "game loop"
 
-    Mercenary TestMerc("", 10, 52.69f);
-    cout << "Merc name: " << TestMerc.GetName() << "\n";
+    //Mercenary TestMerc("", 10, 52.69f);
+    //cout << "Merc name: " << TestMerc.GetName() << "\n";
 
-    //cout << "Merc level: " << TestMerc.GetLVL() << "\n";
+    //cout << "Merc HP: " << TestMerc.GetHP() << "\n";
     //cout << "Merc speed: " << TestMerc.GetSpeed() << "\n";
+
+    Mercenary SwitchCaseTest;
+
 
 
     return 0;

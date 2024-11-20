@@ -1,11 +1,12 @@
 #include "Mercenary.h"
 
+Mercenary::Mercenary() {/* This is the default constructor that just creates the Mercenary Object*/ }
+
 Mercenary::Mercenary(string NewName, int NewLevel, float NewSpeed)
 {
 	SetName(NewName);
-	SetLVL(NewLevel);
+	SetHP(NewLevel);
 	SetSpeed(NewSpeed);
-
 }
 
 string Mercenary::GetName()
@@ -43,12 +44,12 @@ void Mercenary::SetName(string NewName)
 	mName = NewName;
 }
 
-int Mercenary::GetLVL()
+int Mercenary::GetHP()
 {
 	return mLevel;
 }
 
-void Mercenary::SetLVL(int NewLevel)
+void Mercenary::SetHP(int NewLevel)
 {
 	mLevel = NewLevel;
 }
@@ -61,4 +62,89 @@ float Mercenary::GetSpeed()
 void Mercenary::SetSpeed(float NewSpeed)
 {
 	mSpeed = NewSpeed;
+}
+
+// Mercenary Classes //
+// These are going to be called by the switch case in order to set the required values. //
+// Instead of doing it inside main like previously. //
+
+void Mercenary::Scout(Mercenary PlayerReference)
+{
+	PlayerReference.SetName("Scout");
+	PlayerReference.SetHP(125);
+	PlayerReference.SetSpeed(10.0f);
+
+	cout << "The player has chosen the Scout class!" << endl;
+}
+
+void Mercenary::Soldier(Mercenary PlayerReference)
+{
+	PlayerReference.SetName("Soldier");
+	PlayerReference.SetHP(200);
+	PlayerReference.SetSpeed(8.0f);
+
+	cout << "The player has chosen the Soldier class!" << endl;
+}
+
+void Mercenary::Pyro(Mercenary PlayerReference)
+{
+	PlayerReference.SetName("Pyro");
+	PlayerReference.SetHP(175);
+	PlayerReference.SetSpeed(8.0f);
+
+	cout << "The player has chosen the Pyro class!" << endl;
+}
+
+void Mercenary::Demoman(Mercenary PlayerReference)
+{
+	PlayerReference.SetName("Demonan");
+	PlayerReference.SetHP(175);
+	PlayerReference.SetSpeed(8.0f);
+
+	cout << "The player has chosen the Demoman class!" << endl;
+}
+
+void Mercenary::Heavy(Mercenary PlayerReference)
+{
+	PlayerReference.SetName("Heavy");
+	PlayerReference.SetHP(300);
+	PlayerReference.SetSpeed(5.5f);
+
+	cout << "The player has chosen the Heavy class!" << endl;
+}
+
+void Mercenary::Engineer(Mercenary PlayerReference)
+{
+	PlayerReference.SetName("Engineer");
+	PlayerReference.SetHP(125);
+	PlayerReference.SetSpeed(8.0f);
+
+	cout << "The player has chosen the Engineer class!" << endl;
+}
+
+void Mercenary::Medic(Mercenary PlayerReference)
+{
+	PlayerReference.SetName("Medic");
+	PlayerReference.SetHP(150);
+	PlayerReference.SetSpeed(8.0f);
+
+	cout << "The player has chosen the Medic class!" << endl;
+}
+
+void Mercenary::Sniper(Mercenary PlayerReference)
+{
+	PlayerReference.SetName("Sniper");
+	PlayerReference.SetHP(125);
+	PlayerReference.SetSpeed(8.0f);
+
+	cout << "The player has chosen the Sniper class!" << endl;
+}
+
+void Mercenary::Spy(Mercenary PlayerReference)
+{
+	PlayerReference.SetName("Spy");
+	PlayerReference.SetHP(125);
+	PlayerReference.SetSpeed(8.0f);
+
+	cout << "The player has chosen the Spy class!" << endl;
 }

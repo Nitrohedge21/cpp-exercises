@@ -13,13 +13,28 @@ private:
 
 public:
 
+	// This one will be used for the class selector logic (switch case)
+	Mercenary();
+	// This one was used for testing purposes
+
 	Mercenary(string MercName, int MercLevel, float MercSpeed);
+
 	string GetName();
 	void SetName(string NewName);
-	int GetLVL();
-	void SetLVL(int NewLevel);
+	int GetHP();
+	void SetHP(int NewHP);
 	float GetSpeed();
 	void SetSpeed(float NewSpeed);
+
+	void Scout(Mercenary PlayerReference);
+	void Soldier(Mercenary PlayerReference);
+	void Pyro(Mercenary PlayerReference);
+	void Demoman(Mercenary PlayerReference);
+	void Heavy(Mercenary PlayerReference);
+	void Engineer(Mercenary PlayerReference);
+	void Medic(Mercenary PlayerReference);
+	void Sniper(Mercenary PlayerReference);
+	void Spy(Mercenary PlayerReference);
 
 
 };
