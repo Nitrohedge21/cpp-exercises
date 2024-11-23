@@ -16,7 +16,6 @@ string Mercenary::GetName()
 	if (mName != "") 
 	{ 
 		returnValue = mName;
-		cout << "The mercenary's name is " << returnValue << "!\n";
 	}
 	else
 	{

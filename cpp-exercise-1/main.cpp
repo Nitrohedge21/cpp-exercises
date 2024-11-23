@@ -2,6 +2,8 @@
 #include <format>
 #include <Windows.h>
 #include "Mercenary.h"
+#include "GameState.h"
+#include "GameFunctionLibrary.h"
 #include "GlobalFunctions.h"
 
 using namespace std;
@@ -26,6 +28,32 @@ int main()
     Sleep(1000);
     cout << "The game shall begin now!" << endl;
     Sleep(1000);
+
+    // The GameState object gets created AFTER the player has
+    // succesfully chosen a mercenary class.
+    GameState Game;
+    GameFunctionLibrary FunctionLibraryRef;
+
+    while (!Game.isOver)    // While the game isn't over, do the following.
+    {
+        for (int i = 0; i <= 5; i++)
+        {
+            system("CLS");
+            FunctionLibraryRef.PlayerHUD(TestMercenary);
+            cout << "Player gets hurt for no reason" << endl;
+            TestMercenary.SetHP(TestMercenary.GetHP() - 1);
+            Sleep(3000);
+            system("CLS");
+
+            if (i == 3) 
+            { 
+                cout << "the game is over!!!" << endl;
+                Sleep(2000);
+                Game.isOver = true;
+                break;
+            }
+        }
+    }
 
     return 0;
 }
