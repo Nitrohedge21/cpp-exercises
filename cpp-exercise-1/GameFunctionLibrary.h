@@ -5,6 +5,6 @@ class GameFunctionLibrary
 {
 
 public:
-	void PlayerHUD(Mercenary PlayerRef);
+	void PlayerHUD(Mercenary& PlayerRef);
 };
 

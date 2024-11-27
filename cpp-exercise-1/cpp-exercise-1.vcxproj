@@ -24,12 +24,14 @@
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mercenary.cpp" />
+    <ClCompile Include="MovementState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseState.h" />
     <ClInclude Include="GameFunctionLibrary.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="Mercenary.h" />
+    <ClInclude Include="MovementState.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

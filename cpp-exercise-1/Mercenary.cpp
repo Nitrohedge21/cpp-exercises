@@ -124,6 +124,28 @@ void Mercenary::SetPlayerClass()
 	}
 }
 
+// Movement Functions //
+int Mercenary::GetPos(char ChosenAxis)
+{
+	int returnValue;
+
+	if (ChosenAxis == 'X' || ChosenAxis == 'x') { returnValue = posX; }
+	else if (ChosenAxis == 'Y' || ChosenAxis == 'y') { returnValue = posY; }
+
+	return returnValue;
+}
+
+void Mercenary::SetPos(char ChosenAxis, int NewValue)
+{
+	if (ChosenAxis == 'X' || ChosenAxis == 'x') { posX = NewValue; }
+	else if (ChosenAxis == 'Y' || ChosenAxis == 'y') { posY = NewValue; }
+}
+
+int Mercenary::GetMovementCount() { return movementCounter; }
+
+void Mercenary::SetMovementCount(int NewValue) { movementCounter = NewValue; }
+///////////////////////////////////////
+
 // Mercenary Classes //
 // These are going to be called by the switch case in order to set the required values. //
 // Instead of doing it inside main like previously. //

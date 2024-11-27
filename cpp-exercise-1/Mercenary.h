@@ -12,6 +12,11 @@ private:
 	int mHP;
 	float mSpeed;
 
+	// The position variables are used by the MovementState class
+	int posX = 0;
+	int posY = 0;
+	int movementCounter = 0;
+
 public:
 
 	// This one will be used for the class selector logic (switch case)
@@ -28,6 +33,12 @@ public:
 	float GetSpeed();
 	void SetSpeed(float NewSpeed);
 	void SetPlayerClass();
+
+	// Movement functions
+	int GetPos(char ChosenAxis);
+	void SetPos(char ChosenAxis, int NewValue);
+	int GetMovementCount();
+	void SetMovementCount(int NewValue);
 
 	// Mercenary class initializer functions
 	void Scout();

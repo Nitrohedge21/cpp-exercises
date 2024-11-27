@@ -4,3 +4,8 @@ BaseState::BaseState()
 {
 
 }
+
+void BaseState::InitializeState()
+{
+
+}
