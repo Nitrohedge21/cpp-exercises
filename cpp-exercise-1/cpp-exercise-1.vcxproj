@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseState.cpp" />
+    <ClCompile Include="BattleState.cpp" />
     <ClCompile Include="GameFunctionLibrary.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="main.cpp" />
@@ -28,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseState.h" />
+    <ClInclude Include="BattleState.h" />
     <ClInclude Include="GameFunctionLibrary.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="Mercenary.h" />

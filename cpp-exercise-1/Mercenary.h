@@ -50,5 +50,6 @@ public:
 	void Medic();
 	void Sniper();
 	void Spy();
+	void Dev();
 };
 

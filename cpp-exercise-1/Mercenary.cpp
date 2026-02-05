@@ -115,6 +115,9 @@ void Mercenary::SetPlayerClass()
 	case 9:
 		Spy();
 		break;
+	case 69:
+		Dev();
+		break;
 	default:
 		cout << "Invalid input. Please choose a valid mercenary class!" << endl;
 		Sleep(2000);
@@ -179,7 +182,7 @@ void Mercenary::Pyro()
 
 void Mercenary::Demoman()
 {
-	SetName("Demonan");
+	SetName("Demoman");
 	SetHP(175);
 	SetSpeed(8.0f);
 
@@ -229,4 +232,17 @@ void Mercenary::Spy()
 	SetSpeed(8.0f);
 
 	cout << "The player has chosen the Spy class!" << endl;
+}
+
+void Mercenary::Dev()
+{
+	string RandomNameArray[3] = { "Lord X", "Uncle Dane", "Ersan"};								// Create an array of names to randomly pick
+	srand(time(NULL));																			// This is done in order to get a random value everytime
+	string ChosenName = RandomNameArray[rand() % 3];											// Pick a random name and store it (Wanted to make it modular but couldn't figure it out)
+	SetName(ChosenName);
+	SetHP(NULL);
+	SetSpeed(100.0f);
+
+	cout << "The player has chosen the " << ChosenName <<  " class!" << endl;
+	
 }

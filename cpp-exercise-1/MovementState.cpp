@@ -2,7 +2,7 @@
 
 MovementState::MovementState() 
 {
-
+	
 }
 
 void MovementState::InitializeState(Mercenary& PlayerRef)
@@ -45,7 +45,6 @@ void MovementState::InitializeState(Mercenary& PlayerRef)
 			PlayerRef.SetPos('Y', (PlayerRef.GetPos('Y') - 1));
 			PlayerRef.SetMovementCount(PlayerRef.GetMovementCount() + 1);
 			break;
-
 		}
 	}
 }
