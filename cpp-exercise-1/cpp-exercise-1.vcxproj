@@ -23,6 +23,7 @@
     <ClCompile Include="BattleState.cpp" />
     <ClCompile Include="GameFunctionLibrary.cpp" />
     <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="Machine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mercenary.cpp" />
     <ClCompile Include="MovementState.cpp" />
@@ -32,6 +33,7 @@
     <ClInclude Include="BattleState.h" />
     <ClInclude Include="GameFunctionLibrary.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="Machine.h" />
     <ClInclude Include="Mercenary.h" />
     <ClInclude Include="MovementState.h" />
   </ItemGroup>

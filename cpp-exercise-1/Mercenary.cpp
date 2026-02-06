@@ -130,7 +130,7 @@ void Mercenary::SetPlayerClass()
 // Movement Functions //
 int Mercenary::GetPos(char ChosenAxis)
 {
-	int returnValue;
+	int returnValue = 0;
 
 	if (ChosenAxis == 'X' || ChosenAxis == 'x') { returnValue = posX; }
 	else if (ChosenAxis == 'Y' || ChosenAxis == 'y') { returnValue = posY; }
@@ -148,6 +148,16 @@ int Mercenary::GetMovementCount() { return movementCounter; }
 
 void Mercenary::SetMovementCount(int NewValue) { movementCounter = NewValue; }
 ///////////////////////////////////////
+
+// Weapon Functions //
+string Mercenary::GetPrimaryWpName() { return mPrimaryWeapon; }
+void Mercenary::SetPrimaryWpName(string NewPrimaryWeapon) { mPrimaryWeapon = NewPrimaryWeapon; }
+
+string Mercenary::GetSecondaryWpName() { return mSecondaryWeapon; }
+void Mercenary::SetSecondaryWpName(string NewSecondaryWeapon) { mPrimaryWeapon = NewSecondaryWeapon; }
+
+string Mercenary::GetMeleeWpName() { return mMeleeWeapon; }
+void Mercenary::SetMeleeWpName(string NewMeleeWeapon) { mMeleeWeapon = NewMeleeWeapon; }
 
 // Mercenary Classes //
 // These are going to be called by the switch case in order to set the required values. //
