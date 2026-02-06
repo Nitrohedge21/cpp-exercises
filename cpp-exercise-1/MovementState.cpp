@@ -21,11 +21,19 @@ void MovementState::InitializeState(Mercenary& PlayerRef)
 			PlayerRef.SetPos('X', (PlayerRef.GetPos('X') - 1));
 			PlayerRef.SetMovementCount(PlayerRef.GetMovementCount() + 1);
 			break;
+		case 72://integer value of "Up Arrow"
+			PlayerRef.SetPos('X', (PlayerRef.GetPos('X') - 1));
+			PlayerRef.SetMovementCount(PlayerRef.GetMovementCount() + 1);
+			break;
 		case 83://integer value of "S"
 			PlayerRef.SetPos('X', (PlayerRef.GetPos('X') + 1));
 			PlayerRef.SetMovementCount(PlayerRef.GetMovementCount() + 1);
 			break;
 		case 115://integer value of "s"
+			PlayerRef.SetPos('X', (PlayerRef.GetPos('X') + 1));
+			PlayerRef.SetMovementCount(PlayerRef.GetMovementCount() + 1);
+			break;
+		case 80://integer value of "Down Arrow"
 			PlayerRef.SetPos('X', (PlayerRef.GetPos('X') + 1));
 			PlayerRef.SetMovementCount(PlayerRef.GetMovementCount() + 1);
 			break;
@@ -37,11 +45,19 @@ void MovementState::InitializeState(Mercenary& PlayerRef)
 			PlayerRef.SetPos('Y', (PlayerRef.GetPos('Y') + 1));
 			PlayerRef.SetMovementCount(PlayerRef.GetMovementCount() + 1);
 			break;
+		case 77://integer value of "Right Arrow"
+			PlayerRef.SetPos('Y', (PlayerRef.GetPos('Y') + 1));
+			PlayerRef.SetMovementCount(PlayerRef.GetMovementCount() + 1);
+			break;
 		case 65:// integer value of "A"
 			PlayerRef.SetPos('Y', (PlayerRef.GetPos('Y') - 1));
 			PlayerRef.SetMovementCount(PlayerRef.GetMovementCount() + 1);
 			break;
 		case 97:// integer value of "a"
+			PlayerRef.SetPos('Y', (PlayerRef.GetPos('Y') - 1));
+			PlayerRef.SetMovementCount(PlayerRef.GetMovementCount() + 1);
+			break;
+		case 75:// integer value of "Left Arrow"
 			PlayerRef.SetPos('Y', (PlayerRef.GetPos('Y') - 1));
 			PlayerRef.SetMovementCount(PlayerRef.GetMovementCount() + 1);
 			break;
