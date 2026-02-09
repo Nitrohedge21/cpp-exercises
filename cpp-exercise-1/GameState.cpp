@@ -7,6 +7,10 @@ GameState::GameState()
 
 void GameState::InitializeState(Mercenary& PlayerRef, GameFunctionLibrary FunctionLibraryRef)
 {
+    
+    // This is a testing state that I had created to utilize the InitializeState function.
+    // This is not meant to be used in the final code.
+
     for (int i = 0; i <= 5; i++)
     {
         system("CLS");

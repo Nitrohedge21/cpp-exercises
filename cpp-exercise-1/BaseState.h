@@ -8,5 +8,6 @@ public:
 
 	// This will be used to check if the chosen state is over or not.
 	bool isOver = false;
+	bool isGoing = false;
 };
 

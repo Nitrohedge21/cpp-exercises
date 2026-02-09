@@ -10,7 +10,6 @@ class Mercenary
 private:
 	string mName;
 	int mHP;
-	float mSpeed;
 
 	// The position variables are used by the MovementState class
 	int posX = 0;
@@ -22,9 +21,9 @@ private:
 	string mSecondaryWeapon = "Placeholder Secondary";
 	string mMeleeWeapon = "Crowbar";
 
-	int mPrimaryDamage = 1;
-	int mSecondaryDamage = 1;
-	int mMeleeDamage = 1;
+	int mPrimaryDMG = 1;
+	int mSecondaryDMG = 1;
+	int mMeleeDMG = 1;
 
 	Mercenary(string MercName, int MercHP, float MercSpeed);
 
@@ -39,8 +38,6 @@ public:
 	void SetName(string NewName);
 	int GetHP();
 	void SetHP(int NewHP);
-	float GetSpeed();
-	void SetSpeed(float NewSpeed);
 	void SetPlayerClass();
 
 	// Movement functions
@@ -51,13 +48,22 @@ public:
 
 	// Weapon functions
 	string GetPrimaryWpName();
-	void SetPrimaryWpName(string NewPrimaryWeapon);
 	string GetSecondaryWpName();
-	void SetSecondaryWpName(string NewSecondaryWeapon);
 	string GetMeleeWpName();
+
+	void SetPrimaryWpName(string NewPrimaryWeapon);
+	void SetSecondaryWpName(string NewSecondaryWeapon);
 	void SetMeleeWpName(string NewMeleeWeapon);
 
+	int GetPrimaryDMG() { return mPrimaryDMG; }
+	int GetSecondaryDMG() { return mSecondaryDMG; }
+	int GetMeleeDMG() { return mMeleeDMG; }
 
+	void SetPrimaryDMG(int NewPrimaryDMG) { mPrimaryDMG = NewPrimaryDMG; }
+	void SetSecondaryDMG(int NewSecondaryDMG) { mSecondaryDMG = NewSecondaryDMG; }
+	void SetMeleeDMG(int NewMeleeDMG) { mMeleeDMG = NewMeleeDMG; }
+
+private:
 	// Mercenary class initializer functions
 	void Scout();
 	void Soldier();

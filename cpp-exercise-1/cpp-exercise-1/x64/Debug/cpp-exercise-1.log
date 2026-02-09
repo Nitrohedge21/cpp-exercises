@@ -1,10 +1,6 @@
-﻿  BattleState.cpp
-  GameFunctionLibrary.cpp
-  GameState.cpp
-  Machine.cpp
+﻿  main.cpp
   Mercenary.cpp
-D:\Ersan\GitHub\cpp-exercises\cpp-exercise-1\Mercenary.cpp(250,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Ersan\GitHub\cpp-exercises\cpp-exercise-1\Mercenary.cpp(230,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   MovementState.cpp
-  main.cpp
   Generating Code...
   cpp-exercise-1.vcxproj -> D:\Ersan\GitHub\cpp-exercises\cpp-exercise-1\x64\Debug\cpp-exercise-1.exe

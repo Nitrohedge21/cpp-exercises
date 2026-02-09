@@ -4,6 +4,7 @@
 #include "Mercenary.h"
 #include "GameState.h"
 #include "MovementState.h"
+#include "BattleState.h"
 #include "GameFunctionLibrary.h"
 #include "GlobalFunctions.h"
 
@@ -13,14 +14,10 @@ using namespace std;
 
 int main()
 {
-	// This is where all the functions need to be called.
-	// This is the main "game loop"
 
-	//Mercenary TestMerc("", 10, 52.69f);
-	//cout << "Merc name: " << TestMerc.GetName() << "\n";
-
-	//cout << "Merc HP: " << TestMerc.GetHP() << "\n";
-	//cout << "Merc speed: " << TestMerc.GetSpeed() << "\n";
+	GameFunctionLibrary FunctionLibraryRef;
+	//FunctionLibraryRef.IntroText();
+	FunctionLibraryRef.TF2Logo();
 
 	Mercenary TestMercenary;
 	// Game Begins, a blank mercenary class gets created.
@@ -33,17 +30,24 @@ int main()
 	// The GameState object gets created AFTER the player has
 	// succesfully chosen a mercenary class.
 	GameState Game;
-	GameFunctionLibrary FunctionLibraryRef;
+
+	Machine* nMachine = new Machine;	// New instance of an object being created
+	nMachine->GetRandomMachine();		// Have to decide on which approach I want to take
 
 	MovementState MoveState;
+	BattleState BattleState;
 
 	while (!Game.isOver)    // While the game isn't over, do the following.
 	{
-		//Game.InitializeState(TestMercenary, FunctionLibraryRef);
 
 		// The system and playerHUD lines are required for the game
 		system("CLS");
-		FunctionLibraryRef.PlayerHUD(TestMercenary);
+		FunctionLibraryRef.TF2Logo();
+		//FunctionLibraryRef.MovementStateHUD(TestMercenary);
+
+		FunctionLibraryRef.BattleStateHUD(TestMercenary,*nMachine);
+		//BattleState.isOver = true;
+
 
 		MoveState.InitializeState(TestMercenary);
 		MoveState.ProgressCheck(TestMercenary, Game);

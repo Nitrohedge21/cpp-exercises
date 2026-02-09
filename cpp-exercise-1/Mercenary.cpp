@@ -6,7 +6,6 @@ Mercenary::Mercenary(string NewName, int NewHP, float NewSpeed)
 {
 	SetName(NewName);
 	SetHP(NewHP);
-	SetSpeed(NewSpeed);
 }
 
 string Mercenary::GetName()
@@ -53,22 +52,12 @@ void Mercenary::SetHP(int NewHP)
 	mHP = NewHP;
 }
 
-float Mercenary::GetSpeed()
-{
-	return mSpeed;
-}
-
-void Mercenary::SetSpeed(float NewSpeed)
-{
-	mSpeed = NewSpeed;
-}
-
 void Mercenary::SetPlayerClass()
 {
 	int UserInput;
 	
 	cout << "Please choose a mercenary class from the following options!" << endl;
-	cout << "Scout (1), Soldier (2), Pyro (3), Demoman (4),";
+	cout << "Scout (1), Soldier (2), Pyro (3), Demoman (4), ";
 	cout << "Heavy(5), Engineer(6), Medic(7), Sniper(8), Spy(9)" << endl;
 
 	cin >> UserInput;
@@ -167,7 +156,12 @@ void Mercenary::Scout()
 {
 	SetName("Scout");
 	SetHP(125);
-	SetSpeed(10.0f);
+	SetPrimaryWpName("Scattergun");
+	SetPrimaryDMG(27);
+	SetSecondaryWpName("Pistol");
+	SetSecondaryDMG(15);
+	SetMeleeWpName("Bat");
+	SetMeleeDMG(10);
 
 	cout << "The player has chosen the Scout class!" << endl;
 }
@@ -176,7 +170,12 @@ void Mercenary::Soldier()
 {
 	SetName("Soldier");
 	SetHP(200);
-	SetSpeed(8.0f);
+	SetPrimaryWpName("Scattergun");
+	SetPrimaryDMG(27);
+	SetSecondaryWpName("Pistol");
+	SetSecondaryDMG(15);
+	SetMeleeWpName("Bat");
+	SetMeleeDMG(10);
 
 	cout << "The player has chosen the Soldier class!" << endl;
 }
@@ -185,7 +184,12 @@ void Mercenary::Pyro()
 {
 	SetName("Pyro");
 	SetHP(175);
-	SetSpeed(8.0f);
+	SetPrimaryWpName("Scattergun");
+	SetPrimaryDMG(27);
+	SetSecondaryWpName("Pistol");
+	SetSecondaryDMG(15);
+	SetMeleeWpName("Bat");
+	SetMeleeDMG(10);
 
 	cout << "The player has chosen the Pyro class!" << endl;
 }
@@ -194,7 +198,12 @@ void Mercenary::Demoman()
 {
 	SetName("Demoman");
 	SetHP(175);
-	SetSpeed(8.0f);
+	SetPrimaryWpName("Scattergun");
+	SetPrimaryDMG(27);
+	SetSecondaryWpName("Pistol");
+	SetSecondaryDMG(15);
+	SetMeleeWpName("Bat");
+	SetMeleeDMG(10);
 
 	cout << "The player has chosen the Demoman class!" << endl;
 }
@@ -203,7 +212,12 @@ void Mercenary::Heavy()
 {
 	SetName("Heavy");
 	SetHP(300);
-	SetSpeed(5.5f);
+	SetPrimaryWpName("Scattergun");
+	SetPrimaryDMG(27);
+	SetSecondaryWpName("Pistol");
+	SetSecondaryDMG(15);
+	SetMeleeWpName("Bat");
+	SetMeleeDMG(10);
 
 	cout << "The player has chosen the Heavy class!" << endl;
 }
@@ -212,7 +226,12 @@ void Mercenary::Engineer()
 {
 	SetName("Engineer");
 	SetHP(125);
-	SetSpeed(8.0f);
+	SetPrimaryWpName("Scattergun");
+	SetPrimaryDMG(27);
+	SetSecondaryWpName("Pistol");
+	SetSecondaryDMG(15);
+	SetMeleeWpName("Bat");
+	SetMeleeDMG(10);
 
 	cout << "The player has chosen the Engineer class!" << endl;
 }
@@ -221,7 +240,12 @@ void Mercenary::Medic()
 {
 	SetName("Medic");
 	SetHP(150);
-	SetSpeed(8.0f);
+	SetPrimaryWpName("Scattergun");
+	SetPrimaryDMG(27);
+	SetSecondaryWpName("Pistol");
+	SetSecondaryDMG(15);
+	SetMeleeWpName("Bat");
+	SetMeleeDMG(10);
 
 	cout << "The player has chosen the Medic class!" << endl;
 }
@@ -230,7 +254,12 @@ void Mercenary::Sniper()
 {
 	SetName("Sniper");
 	SetHP(125);
-	SetSpeed(8.0f);
+	SetPrimaryWpName("Scattergun");
+	SetPrimaryDMG(27);
+	SetSecondaryWpName("Pistol");
+	SetSecondaryDMG(15);
+	SetMeleeWpName("Bat");
+	SetMeleeDMG(10);
 
 	cout << "The player has chosen the Sniper class!" << endl;
 }
@@ -239,7 +268,12 @@ void Mercenary::Spy()
 {
 	SetName("Spy");
 	SetHP(125);
-	SetSpeed(8.0f);
+	SetPrimaryWpName("Scattergun");
+	SetPrimaryDMG(27);
+	SetSecondaryWpName("Pistol");
+	SetSecondaryDMG(15);
+	SetMeleeWpName("Bat");
+	SetMeleeDMG(10);
 
 	cout << "The player has chosen the Spy class!" << endl;
 }
@@ -247,11 +281,16 @@ void Mercenary::Spy()
 void Mercenary::Dev()
 {
 	string RandomNameArray[3] = { "Lord X", "Uncle Dane", "Ersan"};								// Create an array of names to randomly pick
-	srand(time(NULL));																			// This is done in order to get a random value everytime
+	srand(time(0));																				// This is done in order to get a random value everytime
 	string ChosenName = RandomNameArray[rand() % 3];											// Pick a random name and store it (Wanted to make it modular but couldn't figure it out)
 	SetName(ChosenName);
 	SetHP(NULL);
-	SetSpeed(100.0f);
+	SetPrimaryWpName("Scattergun");
+	SetPrimaryDMG(27);
+	SetSecondaryWpName("Pistol");
+	SetSecondaryDMG(15);
+	SetMeleeWpName("Bat");
+	SetMeleeDMG(10);
 
 	cout << "The player has chosen the " << ChosenName <<  " class!" << endl;
 	
