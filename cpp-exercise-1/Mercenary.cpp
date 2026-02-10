@@ -1,6 +1,6 @@
 #include "Mercenary.h"
 
-Mercenary::Mercenary() {/* This is the default constructor that just creates the Mercenary Object*/ }
+Mercenary::Mercenary() { /* This is the default constructor that just creates the Mercenary Object*/ }
 
 Mercenary::Mercenary(string NewName, int NewHP, float NewSpeed)
 {
@@ -42,15 +42,17 @@ void Mercenary::SetName(string NewName)
 	mName = NewName;
 }
 
-int Mercenary::GetHP()
-{
-	return mHP;
-}
+int Mercenary::GetHP() { return mHP; }
 
-void Mercenary::SetHP(int NewHP)
-{
-	mHP = NewHP;
-}
+void Mercenary::SetHP(int NewHP) { mHP = NewHP; }
+
+int Mercenary::GetXP() { return mXP; }
+
+void Mercenary::SetXP(float NewXP) { mXP = NewXP; }
+
+int Mercenary::GetLevel() { return mLVL; }
+
+void Mercenary::SetLevel(int NewLVL) { mLVL = NewLVL; }
 
 void Mercenary::SetPlayerClass()
 {
@@ -140,13 +142,32 @@ void Mercenary::SetMovementCount(int NewValue) { movementCounter = NewValue; }
 
 // Weapon Functions //
 string Mercenary::GetPrimaryWpName() { return mPrimaryWeapon; }
-void Mercenary::SetPrimaryWpName(string NewPrimaryWeapon) { mPrimaryWeapon = NewPrimaryWeapon; }
-
 string Mercenary::GetSecondaryWpName() { return mSecondaryWeapon; }
-void Mercenary::SetSecondaryWpName(string NewSecondaryWeapon) { mPrimaryWeapon = NewSecondaryWeapon; }
-
 string Mercenary::GetMeleeWpName() { return mMeleeWeapon; }
+
+int Mercenary::GetPrimaryDMG() { return mPrimaryDMG; }
+int Mercenary::GetSecondaryDMG() { return mSecondaryDMG; }
+int Mercenary::GetMeleeDMG() { return mMeleeDMG; }
+
+void Mercenary::SetPrimaryWpName(string NewPrimaryWeapon) { mPrimaryWeapon = NewPrimaryWeapon; }
+void Mercenary::SetSecondaryWpName(string NewSecondaryWeapon) { mSecondaryWeapon = NewSecondaryWeapon; }
 void Mercenary::SetMeleeWpName(string NewMeleeWeapon) { mMeleeWeapon = NewMeleeWeapon; }
+
+void Mercenary::SetPrimaryDMG(int NewPrimaryDMG) { mPrimaryDMG = NewPrimaryDMG; }
+void Mercenary::SetSecondaryDMG(int NewSecondaryDMG) { mSecondaryDMG = NewSecondaryDMG; }
+void Mercenary::SetMeleeDMG(int NewMeleeDMG) { mMeleeDMG = NewMeleeDMG; }
+
+bool Mercenary::IsEngineer()
+{
+	if (mIsEngineer == true) { return true; }
+	else { return false; }
+}
+
+bool Mercenary::IsMedic()
+{
+	if (mIsMedic == true) { return true; }
+	else { return false; }
+}
 
 // Mercenary Classes //
 // These are going to be called by the switch case in order to set the required values. //
@@ -170,12 +191,12 @@ void Mercenary::Soldier()
 {
 	SetName("Soldier");
 	SetHP(200);
-	SetPrimaryWpName("Scattergun");
-	SetPrimaryDMG(27);
-	SetSecondaryWpName("Pistol");
-	SetSecondaryDMG(15);
-	SetMeleeWpName("Bat");
-	SetMeleeDMG(10);
+	SetPrimaryWpName("Rocket Launcher");
+	SetPrimaryDMG(35);
+	SetSecondaryWpName("Shotgun");
+	SetSecondaryDMG(20);
+	SetMeleeWpName("Shovel");
+	SetMeleeDMG(12);
 
 	cout << "The player has chosen the Soldier class!" << endl;
 }
@@ -184,11 +205,11 @@ void Mercenary::Pyro()
 {
 	SetName("Pyro");
 	SetHP(175);
-	SetPrimaryWpName("Scattergun");
+	SetPrimaryWpName("Flamethrower");
 	SetPrimaryDMG(27);
-	SetSecondaryWpName("Pistol");
-	SetSecondaryDMG(15);
-	SetMeleeWpName("Bat");
+	SetSecondaryWpName("Shotgun");
+	SetSecondaryDMG(20);
+	SetMeleeWpName("Fireaxe");
 	SetMeleeDMG(10);
 
 	cout << "The player has chosen the Pyro class!" << endl;
@@ -198,11 +219,11 @@ void Mercenary::Demoman()
 {
 	SetName("Demoman");
 	SetHP(175);
-	SetPrimaryWpName("Scattergun");
-	SetPrimaryDMG(27);
-	SetSecondaryWpName("Pistol");
-	SetSecondaryDMG(15);
-	SetMeleeWpName("Bat");
+	SetPrimaryWpName("Grenade Launcher");
+	SetPrimaryDMG(25);
+	SetSecondaryWpName("Stickybomb Laucnher");
+	SetSecondaryDMG(20);
+	SetMeleeWpName("Bottle");
 	SetMeleeDMG(10);
 
 	cout << "The player has chosen the Demoman class!" << endl;
@@ -212,12 +233,12 @@ void Mercenary::Heavy()
 {
 	SetName("Heavy");
 	SetHP(300);
-	SetPrimaryWpName("Scattergun");
-	SetPrimaryDMG(27);
-	SetSecondaryWpName("Pistol");
-	SetSecondaryDMG(15);
-	SetMeleeWpName("Bat");
-	SetMeleeDMG(10);
+	SetPrimaryWpName("Minigun");
+	SetPrimaryDMG(35);
+	SetSecondaryWpName("Shotgun");
+	SetSecondaryDMG(20);
+	SetMeleeWpName("Fists");
+	SetMeleeDMG(13);
 
 	cout << "The player has chosen the Heavy class!" << endl;
 }
@@ -226,12 +247,20 @@ void Mercenary::Engineer()
 {
 	SetName("Engineer");
 	SetHP(125);
-	SetPrimaryWpName("Scattergun");
-	SetPrimaryDMG(27);
-	SetSecondaryWpName("Pistol");
-	SetSecondaryDMG(15);
-	SetMeleeWpName("Bat");
-	SetMeleeDMG(10);
+	SetPrimaryWpName("Shotgun");
+	SetPrimaryDMG(25);
+
+	// Secondary is replaced by the sentry
+	//SetSecondaryWpName("Pistol");
+	//SetSecondaryDMG(15);
+
+	// These will be replaced by getters and setters.
+	mIsEngineer = true;
+	mSentryHP = 100;
+	mSentryDMG = rand() % 40 + 10;
+
+	SetMeleeWpName("Wrench");
+	SetMeleeDMG(8);
 
 	cout << "The player has chosen the Engineer class!" << endl;
 }
@@ -240,12 +269,15 @@ void Mercenary::Medic()
 {
 	SetName("Medic");
 	SetHP(150);
-	SetPrimaryWpName("Scattergun");
-	SetPrimaryDMG(27);
-	SetSecondaryWpName("Pistol");
-	SetSecondaryDMG(15);
-	SetMeleeWpName("Bat");
+	SetPrimaryWpName("Syringe Gun");
+	SetPrimaryDMG(20);
+	SetSecondaryWpName("Medigun");							// Medigun should be used on himself
+	SetSecondaryDMG(rand() % 10 + 10);						// To essentially regen HP in battle
+	SetMeleeWpName("Bonesaw");
 	SetMeleeDMG(10);
+
+	// This will be replaced by getters and setters.
+	mIsMedic = true;
 
 	cout << "The player has chosen the Medic class!" << endl;
 }
@@ -281,7 +313,7 @@ void Mercenary::Spy()
 void Mercenary::Dev()
 {
 	string RandomNameArray[3] = { "Lord X", "Uncle Dane", "Ersan"};								// Create an array of names to randomly pick
-	srand(time(0));																				// This is done in order to get a random value everytime
+	srand(static_cast<unsigned int>(time(0)));													// This is done in order to get a random value everytime
 	string ChosenName = RandomNameArray[rand() % 3];											// Pick a random name and store it (Wanted to make it modular but couldn't figure it out)
 	SetName(ChosenName);
 	SetHP(NULL);
@@ -293,5 +325,4 @@ void Mercenary::Dev()
 	SetMeleeDMG(10);
 
 	cout << "The player has chosen the " << ChosenName <<  " class!" << endl;
-	
 }

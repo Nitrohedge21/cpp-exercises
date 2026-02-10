@@ -30,26 +30,56 @@ void GameFunctionLibrary::MovementStateHUD(Mercenary& PlayerRef)
 
 void GameFunctionLibrary::BattleStateHUD(Mercenary& PlayerRef, Machine& MachineRef)
 {
-	cout << "\n============================== BATTLE STATUS ==============================\n";
 
-	// 1. Header (Standard 50-character gap)
-	cout << setw(6) << " ";
-	cout << left << setw(34) << "PLAYER";
-	cout << "ENEMY" << endl;
+	if (!PlayerRef.IsEngineer())
+	{
+		cout << "\n============================== BATTLE STATUS ==============================\n";
 
-	// 2. Names
-	cout << "Name: " << left << setw(34) << PlayerRef.GetName();
-	cout << MachineRef.GetName() << endl;
+		// 1. Header (Standard 50-character gap)
+		cout << setw(10) << " ";
+		cout << left << setw(34) << "PLAYER";
+		cout << "ENEMY" << endl;
 
-	// 3. HP
-	cout << "HP: " << left << setw(36) << PlayerRef.GetHP();
-	cout << MachineRef.GetHP() << endl;
+		// 2. Names
+		cout << setw(10) << "Name: ";
+		cout << left << setw(34) << PlayerRef.GetName();
+		cout << MachineRef.GetName() << endl;
 
-	//4. Primary Weapon & DMG
-	cout << "Primary & DMG: " << left << setw(10) << PlayerRef.GetPrimaryWpName() << " / " << PlayerRef.GetPrimaryDMG();
-	cout << MachineRef.GetPrimaryWpName() << " / " << MachineRef.GetPrimaryDMG() << endl;
+		// 3. HP
+		cout << setw(10) << "HP: ";
+		cout << left << setw(34) << PlayerRef.GetHP();
+		cout << MachineRef.GetHP() << endl;
 
-	cout << "===========================================================================\n";
+		//4. Primary Weapon
+		cout << setw(10) << "Primary: ";
+		cout << left << setw(34) << PlayerRef.GetPrimaryWpName();
+		cout << MachineRef.GetPrimaryWpName() << endl;
+
+		//4.5. Primary DMG
+		cout << setw(10) << "DMG: ";
+		cout << left << setw(34) << PlayerRef.GetPrimaryDMG();
+		cout << MachineRef.GetPrimaryDMG() << endl;
+
+
+
+		cout << "===========================================================================\n";
+
+		if (!PlayerRef.IsMedic())
+		{
+			cout << "What do you do? (1. Primary, 2. Secondary, 3. Melee, 4. Escape)" << endl;
+		}
+		else
+		{
+			cout << "What do you do? (1. Primary, 2. Heal, 3. Melee, 4. Escape)" << endl;
+		}
+	}
+	else
+	{
+		// Basically the same thing except for the secondary which is replaced by the sentry
+
+		cout << "What do you do? (1. Primary, 2. Sentry, 3. Melee, 4. Escape)" << endl;
+	}
+	
 }
 
 void GameFunctionLibrary::IntroText()

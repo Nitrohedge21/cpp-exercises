@@ -8,15 +8,26 @@ using namespace std;
 class Mercenary
 {
 private:
+	
+	// Player base variables
 	string mName;
-	int mHP;
+	int mHP = 0;
+
+	// Variables to check if the player is a specific class
+	bool mIsMedic = false;
+	bool mIsEngineer = false;
+
+	// Engineer specific variables
+	int mMetal = 0;
+	int mSentryHP = 0;
+	int mSentryDMG = 0;
 
 	// The position variables are used by the MovementState class
 	int posX = 0;
 	int posY = 0;
 	int movementCounter = 0;
 	
-	// Weapon stuff
+	// Weapon variables
 	string mPrimaryWeapon = "Placeholder Primary";
 	string mSecondaryWeapon = "Placeholder Secondary";
 	string mMeleeWeapon = "Crowbar";
@@ -24,6 +35,10 @@ private:
 	int mPrimaryDMG = 1;
 	int mSecondaryDMG = 1;
 	int mMeleeDMG = 1;
+
+	// Player progression variables
+	int mLVL = 1;
+	float mXP = 0.0f;
 
 	Mercenary(string MercName, int MercHP, float MercSpeed);
 
@@ -38,6 +53,10 @@ public:
 	void SetName(string NewName);
 	int GetHP();
 	void SetHP(int NewHP);
+	int GetXP();
+	void SetXP(float NewXP);
+	int GetLevel();
+	void SetLevel(int NewLevel);
 	void SetPlayerClass();
 
 	// Movement functions
@@ -55,13 +74,16 @@ public:
 	void SetSecondaryWpName(string NewSecondaryWeapon);
 	void SetMeleeWpName(string NewMeleeWeapon);
 
-	int GetPrimaryDMG() { return mPrimaryDMG; }
-	int GetSecondaryDMG() { return mSecondaryDMG; }
-	int GetMeleeDMG() { return mMeleeDMG; }
+	int GetPrimaryDMG();
+	int GetSecondaryDMG();
+	int GetMeleeDMG();
 
-	void SetPrimaryDMG(int NewPrimaryDMG) { mPrimaryDMG = NewPrimaryDMG; }
-	void SetSecondaryDMG(int NewSecondaryDMG) { mSecondaryDMG = NewSecondaryDMG; }
-	void SetMeleeDMG(int NewMeleeDMG) { mMeleeDMG = NewMeleeDMG; }
+	void SetPrimaryDMG(int NewPrimaryDMG);
+	void SetSecondaryDMG(int NewSecondaryDMG);
+	void SetMeleeDMG(int NewMeleeDMG);
+
+	bool IsEngineer();
+	bool IsMedic();
 
 private:
 	// Mercenary class initializer functions

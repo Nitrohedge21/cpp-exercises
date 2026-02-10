@@ -16,7 +16,7 @@ Machine::Machine(string MachineName, int MachineHP, string PrimaryWp, int Primar
 
 void Machine::GetRandomMachine()	// This could be potentially done in a different way but this is how I was able to do it myself.
 {
-	srand(time(0));
+	srand(static_cast<unsigned int>(time(0)));		// This was a suggestion from Gemini in order to get rid of warnings
 	int ChosenValue = rand() % MachineArrayLength;
 
 	switch (ChosenValue)
@@ -53,7 +53,7 @@ void Machine::GetRandomMachine()	// This could be potentially done in a differen
 
 void Machine::CaptainPunch()
 {
-	srand(time(0));
+	srand(static_cast<unsigned int>(time(0)));
 	SetName("Captain Punch");
 	SetHP(300);
 	SetPrimaryWpName("NONE");
@@ -66,7 +66,7 @@ void Machine::CaptainPunch()
 
 void Machine::FanScout()
 {
-	srand(time(0));
+	srand(static_cast<unsigned int>(time(0)));
 	SetName("Force-A-Nature Scout");
 	SetHP(120);
 	SetPrimaryWpName("Force-A-Nature");
@@ -79,7 +79,7 @@ void Machine::FanScout()
 
 void Machine::HeavyChamp()
 {
-	srand(time(0));
+	srand(static_cast<unsigned int>(time(0)));
 	SetName("Heavyweight Champ");
 	SetHP(300);
 	SetPrimaryWpName("The Panic Attack");
@@ -93,7 +93,7 @@ void Machine::HeavyChamp()
 void Machine::DemoknightBot()
 {
 
-	srand(time(0));
+	srand(static_cast<unsigned int>(time(0)));
 	SetName("Demoknight");
 	SetHP(200);
 	SetPrimaryWpName("Chargin' Targe");
@@ -108,7 +108,7 @@ void Machine::DemoknightBot()
 void Machine::BBoxSoldier()
 {
 
-	srand(time(0));
+	srand(static_cast<unsigned int>(time(0)));
 	SetName("Black Box Soldier");
 	SetHP(200);
 	SetPrimaryWpName("BlackBox");
@@ -123,7 +123,7 @@ void Machine::BBoxSoldier()
 void Machine::SniperBot()
 {
 
-	srand(time(0));
+	srand(static_cast<unsigned int>(time(0)));
 	SetName("Sniper Bot");
 	SetHP(120);
 	SetPrimaryWpName("Sniper Rifle");
@@ -138,7 +138,7 @@ void Machine::SniperBot()
 void Machine::MLScout()
 {
 
-	srand(time(0));
+	srand(static_cast<unsigned int>(time(0)));
 	SetName("Minor League Scout");
 	SetHP(120);
 	SetPrimaryWpName("Force-A-Nature");
@@ -154,7 +154,7 @@ void Machine::PyroBot()
 {
 
 
-	srand(time(0));
+	srand(static_cast<unsigned int>(time(0)));
 	SetName("Pyro Bot");
 	SetHP(170);
 	SetPrimaryWpName("Scorch Shot");
@@ -168,7 +168,7 @@ void Machine::PyroBot()
 void Machine::SoldierBot()
 {
 
-	srand(time(0));
+	srand(static_cast<unsigned int>(time(0)));
 	SetName("Soldier Bot");
 	SetHP(180);
 	SetPrimaryWpName("Rocket Launcher");
